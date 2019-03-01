@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dotfiles=(".tmux.conf")
+dir="${HOME}/.dotfiles"
+
+for dotfile in "${dotfiles[@]}";do
+  ln -s "${dir}/${dotfile}" "${HOME}" 
+done
