@@ -3,6 +3,11 @@
 dotfiles=(".tmux.conf")
 dir="${HOME}/.dotfiles"
 
-for dotfile in "${dotfiles[@]}";do
-  ln -s "${dir}/${dotfile}" "${HOME}" 
+for dotfile in "${dotfiles[@]}";do 
+  if [ -f "${HOME}/${dotfile}" ]; then
+    rm "${HOME}/${dotfile}"
+    ln -s "${dir}/${dotfile}" "${HOME}"
+  else
+    ln -s "${dir}/${dotfile}" "${HOME}"
+  fi
 done
