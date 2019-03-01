@@ -7,3 +7,4 @@
 ### adding dotfile
 Add the dotfiles in the variable **dotfiles** in **${HOME}/.dotfiles/setup_dotfiles** like this
 `dotfiles=(".vimrc" ".zshrc" ".gitconfig")`
+and execute the script
