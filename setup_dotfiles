@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles=(".tmux.conf")
+dotfiles=(".tmux.conf" ".zshrc")
 dir="${HOME}/.dotfiles"
 
 for dotfile in "${dotfiles[@]}";do 
