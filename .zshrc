@@ -2,7 +2,7 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
-# This will set the default prompt to the walters theme
+# This will set the default prompt theme
 prompt fade
 
 # ctrl + arrow fix
@@ -21,4 +21,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+# tab -> folder selection 
+zstyle ':completion:*' menu select
 
