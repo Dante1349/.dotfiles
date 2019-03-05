@@ -1,0 +1,26 @@
+# Easier navigation: .., ..., ...., .....
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias e="exit"
+
+# Folder Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias w="cd ~/workspace"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# URL-encode strings
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+
+# Get week number
+alias week='date +%V'
+
+# source zsh
+alias sz='source ~/.zshrc'
+
+# update ubuntu
+alias uu='sudo apt-get update && sudo apt-get upgrade -y'

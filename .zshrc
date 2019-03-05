@@ -2,6 +2,9 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
+# aliases
+source $HOME/.aliases
+
 # This will set the default prompt theme
 prompt fade
 
