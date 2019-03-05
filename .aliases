@@ -36,7 +36,8 @@ alias webserver='python -m SimpleHTTPServer 8000'
 
 # showip
 alias ip.ext='curl ipinfo.io/ip'
-alias ip.int='ifconfig'
+alias ip.lan='ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}''
+alias ip.wlan='ifconfig wlp3s0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}''
 
 # password generation
 alias p8="openssl rand -base64 8"
