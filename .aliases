@@ -1,3 +1,6 @@
+# show shortcuts
+alias sc='cat ~/.aliases | egrep -v "^\s*(#|$)"'
+
 # Easier navigation: .., ..., ...., .....
 alias ..="cd .."
 alias ...="cd ../.."
@@ -5,6 +8,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias e="exit"
 alias c='clear'
+alias b='cd -'
 
 # Folder Shortcuts
 alias d="cd ~/Downloads"
