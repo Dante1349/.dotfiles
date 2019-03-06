@@ -7,8 +7,7 @@ alias e="exit"
 alias c='clear'
 
 # Folder Shortcuts
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
+alias d="cd ~/Downloads"
 alias w="cd ~/workspace"
 
 # Print each PATH entry on a separate line
@@ -21,7 +20,7 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 alias week='date +%V'
 
 # source zsh
-alias sz='source ~/.zshrc'
+alias sz='source ~/.zshrc && echo "reloaded zsh"'
 
 # debian and ubuntu
 alias uu='sudo apt-get update && sudo apt-get upgrade -y'
@@ -40,10 +39,10 @@ alias ip.lan='ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}''
 alias ip.wlan='ifconfig wlp3s0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}''
 
 # password generation
-alias p8="openssl rand -base64 8"
-alias p16="openssl rand -base64 16"
-alias p32="openssl rand -base64 32"
+alias p8='openssl rand -base64 8'
+alias p16='openssl rand -base64 16'
+alias p32='openssl rand -base64 32'
 
 # git
-alias gac="git add . && git commit -a -m "
-
+alias gac='git add . && git commit -a -m '
+alias gp='git push '

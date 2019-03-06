@@ -11,3 +11,6 @@ for dotfile in "${dotfiles[@]}";do
     ln -s "${dir}/${dotfile}" "${HOME}"
   fi
 done
+
+source ~/.zshrc
+echo "Dotfiles installed successfully"
