@@ -1,18 +1,19 @@
 # show shortcuts
 alias sc='cat ~/.aliases | egrep -v "^\s*(#|$)"'
+alias ea='nano ~/.dotfiles/.aliases'
 
 # Easier navigation: .., ..., ...., .....
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias e="exit"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias e='exit'
 alias c='clear'
 alias b='cd -'
 
 # Folder Shortcuts
-alias d="cd ~/Downloads"
-alias w="cd ~/workspace"
+alias d='cd ~/Downloads'
+alias w='cd ~/workspace'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
@@ -48,5 +49,6 @@ alias p16='openssl rand -base64 16'
 alias p32='openssl rand -base64 32'
 
 # git
+alias gp='git pull '
 alias gac='git add . && git commit -a -m '
-alias gp='git push '
+alias gpsh='git push '

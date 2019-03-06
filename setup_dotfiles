@@ -12,5 +12,4 @@ for dotfile in "${dotfiles[@]}";do
   fi
 done
 
-source ~/.zshrc
 echo "Dotfiles installed successfully"
