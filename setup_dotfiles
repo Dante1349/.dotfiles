@@ -11,3 +11,5 @@ for dotfile in "${dotfiles[@]}";do
     ln -s "${dir}/${dotfile}" "${HOME}"
   fi
 done
+
+echo "Dotfiles installed successfully"
