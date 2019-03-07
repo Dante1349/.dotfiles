@@ -3,7 +3,8 @@ compinit
 promptinit
 
 # aliases
-source $HOME/.aliases
+source "$HOME/.aliases"
+source "$HOME/.functions"
 
 # This will set the default prompt theme
 prompt fade
