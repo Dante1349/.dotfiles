@@ -1,7 +1,7 @@
 # show shortcuts
 alias sc='cat ~/.aliases | egrep -v "^\s*(#|$)"'
 alias ea='nano ~/.dotfiles/.aliases'
-
+alias ef='nano ~/.dotfiles/.functions'
 # Easier navigation: .., ..., ...., .....
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -54,3 +54,10 @@ alias gb='git branch -vv'
 alias gp='git pull '
 alias gac='git add . && git commit -a -m '
 alias gpsh='git push '
+
+# system
+# *  sudo apt-get lm-sensors
+alias cputemp='sensors | grep Core'
+
+# network
+alias ports='sudo netstat -tulanp'

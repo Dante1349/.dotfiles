@@ -1,3 +1,10 @@
+# create backup file
+backdafuckup() { 
+  cp "$1"{,.bak};
+}
+
+# system info
+# needs update
 my.sysinfo () {
   printf "CPU: "
   cat /proc/cpuinfo | grep "model name" | head -1 | awk '{ for (i = 4; i <= NF; i++) printf "%s ", $i }'
@@ -14,3 +21,4 @@ my.sysinfo () {
   cputemp | tail -1 | awk '{ printf "%s %s %s\n", $1, $2, $3 }'
   #cputemp | awk '{ printf "%s %s", $1 $2 }'
 }
+
