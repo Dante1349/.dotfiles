@@ -49,6 +49,8 @@ alias p16='openssl rand -base64 16'
 alias p32='openssl rand -base64 32'
 
 # git
+alias gs='git status'
+alias gb='git branch -vv'
 alias gp='git pull '
 alias gac='git add . && git commit -a -m '
 alias gpsh='git push '
