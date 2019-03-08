@@ -11,4 +11,7 @@ for dotfile in "${dotfiles[@]}";do
   fi
 done
 
+cd ..
+rm -rf "$HOME/.dotfiles"
+
 echo "Dotfiles uninstalled successfully"
