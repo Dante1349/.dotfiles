@@ -13,7 +13,7 @@ alias b='cd -'
 
 # Folder Shortcuts
 alias d='cd ~/Downloads'
-alias w='cd ~/workspace'
+alias w='cd $DOTFILES_WORKSPACE_PATH'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
@@ -54,6 +54,10 @@ alias gb='git branch -vv'
 alias gp='git pull '
 alias gac='git add . && git commit -a -m '
 alias gpsh='git push '
+
+# git confie
+alias gitconfmail='git config --global user.email '
+alias gitconfname='git config --global user.name '
 
 # system
 # *  sudo apt-get lm-sensors

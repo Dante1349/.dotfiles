@@ -1,6 +1,14 @@
 #!/bin/bash
 
-dotfiles=(".tmux.conf" ".zshrc" ".aliases" ".functions")
+if [ -f ".dotfiles_env" ]; then
+   echo ".dotfiles_env exists."
+   echo "Continuing..."
+else
+   echo "Please setup a .dotfiles_env file first."
+   exit 1
+fi
+
+dotfiles=(".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env")
 dir="${HOME}/.dotfiles"
 
 for dotfile in "${dotfiles[@]}";do 
