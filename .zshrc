@@ -9,8 +9,10 @@ source "$HOME/.functions"
 
 # This will set the default prompt theme
 prompt fade
-# applay dotfiles theming
-rst
+
+# NOT WORKING
+# apply default theme
+#t.setTerminalColor
 
 # ctrl + arrow fix
 bindkey '^[[1;5C' forward-word
