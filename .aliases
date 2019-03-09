@@ -1,4 +1,14 @@
 # bash colors
+alias 0='t.setTerminalColor'   #reset
+alias 1='t.setTerminalColor 1' #red
+alias 2='t.setTerminalColor 2' #green
+alias 3='t.setTerminalColor 3' #yellow
+alias 4='t.setTerminalColor 4' #blue
+alias 5='t.setTerminalColor 5' #pink
+alias 6='t.setTerminalColor 6' #cyan
+alias 7='t.setTerminalColor 7' #white
+alias 8='t.setTerminalColor 8' #black
+
 alias rst='t.setTerminalColor'
 alias red='t.setTerminalColor red'
 alias blue='t.setTerminalColor blue'

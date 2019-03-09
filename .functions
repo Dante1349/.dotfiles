@@ -1,5 +1,4 @@
-# 
-
+# t.setTerminalColor(1-7|$(colorname)) 
 t.setTerminalColor() {
   if [ -z "$1" ]
   then
@@ -7,7 +6,7 @@ t.setTerminalColor() {
   else
         COLOR="$1"
   fi
-
+ 
   colorProfile=$(sed "s/main_color/$COLOR/g" <<< $DOTFILES_DEFAULT_THEME)
   colorProfile=$(sed "s/font_color/$DOTFILES_FONT_COLOR/g" <<< $colorProfile)
   colorProfile=$(sed "s/background_color/$DOTFILES_BACKGROUND_COLOR/g" <<< $colorProfile)
