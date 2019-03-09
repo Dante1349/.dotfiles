@@ -1,9 +1,11 @@
+# themes
+export DOTFILES_THEME_ONE="%F{main_color}%B%K{main_color}█▓▒░%F{font_color}%K{main_color}%B%n@%m%b%F{main_color}%K{background_color}█▓▒░%F{font_color}%K{background_color}%B %D{%a %b %d} %D{%I:%M:%S%P} 
+%}%F{main_color}%K{background_color}%B%~/%b%k%f"
+
 export DOTFILES_WORKSPACE_PATH="$HOME/workspace"
 export DOTFILES_MAIN_COLOR="green"
 export DOTFILES_FONT_COLOR="white"
 export DOTFILES_BACKGROUND_COLOR="black"
 export DOTFILES_DEFAULT_THEME="$DOTFILES_THEME_ONE"
 
-# themes
-export DOTFILES_THEME_ONE="%F{main_color}%B%K{main_color}█▓▒░%F{font_color}%K{main_color}%B%n@%m%b%F{main_color}%K{background_color}█▓▒░%F{font_color}%K{background_color}%B %D{%a %b %d} %D{%I:%M:%S%P} 
-%}%F{main_color}%K{background_color}%B%~/%b%k%f"
+

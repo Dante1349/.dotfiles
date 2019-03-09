@@ -10,9 +10,8 @@ source "$HOME/.functions"
 # This will set the default prompt theme
 prompt fade
 
-# NOT WORKING
 # apply default theme
-#t.setTerminalColor
+t.setTerminalColor
 
 # ctrl + arrow fix
 bindkey '^[[1;5C' forward-word
@@ -33,4 +32,3 @@ fi
 
 # tab -> folder selection 
 zstyle ':completion:*' menu select
-
