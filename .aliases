@@ -1,3 +1,13 @@
+# bash colors
+alias rst='t.setTerminalColor'
+alias red='t.setTerminalColor red'
+alias blue='t.setTerminalColor blue'
+alias yellow='t.setTerminalColor yellow'
+alias green='t.setTerminalColor green'
+alias cyan='t.setTerminalColor cyan'
+alias pink='t.setTerminalColor magenta'
+alias white='t.setTerminalColor 7'
+
 # show shortcuts
 alias sc='cat ~/.aliases | egrep -v "^\s*(#|$)"'
 alias ea='nano ~/.dotfiles/.aliases'

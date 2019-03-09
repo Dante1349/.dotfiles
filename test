@@ -1,0 +1,5 @@
+#!/bin/bash
+echo $DOTFILES_GREEN
+cp=$DOTFILES_GREEN
+cp=$(sed 's/green/red/g' <<< $cp)
+echo $cp
