@@ -44,8 +44,9 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # Get week number
 alias week='date +%V'
 
-# source zsh
+# source single dotfiles
 alias sz='source ~/.zshrc && echo "reloaded zsh"'
+alias st='tmux source-file ~/.tmux.conf && echo "reloaded tmux"'
 
 # debian and ubuntu
 alias uu='sudo apt-get update && sudo apt-get upgrade -y'
