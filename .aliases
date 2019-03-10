@@ -82,7 +82,7 @@ alias gitconfname='git config --global user.name '
 
 # system
 # *  sudo apt-get lm-sensors
-alias cputemp='sensors | grep Core'
+alias sys.temp='sensors | grep Core'
 
 # network
-alias ports='sudo netstat -tulanp'
+alias sys.ports='sudo netstat -tulanp'
