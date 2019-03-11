@@ -20,7 +20,7 @@ backdafuckup() {
 
 # system info
 # needs update
-sys.info () {
+sys.info() {
   printf "CPU: "
   cat /proc/cpuinfo | grep "model name" | head -1 | awk '{ for (i = 4; i <= NF; i++) printf "%s ", $i }'
   printf "\n"
@@ -37,3 +37,6 @@ sys.info () {
   #cputemp | awk '{ printf "%s %s", $1 $2 }'
 }
 
+g.getBranchParsed() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
