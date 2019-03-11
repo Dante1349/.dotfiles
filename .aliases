@@ -1,22 +1,23 @@
 # bash colors
-alias 0='t.setTerminalColor'   #reset
-alias 1='t.setTerminalColor 1' #red
-alias 2='t.setTerminalColor 2' #green
-alias 3='t.setTerminalColor 3' #yellow
-alias 4='t.setTerminalColor 4' #blue
-alias 5='t.setTerminalColor 5' #pink
-alias 6='t.setTerminalColor 6' #cyan
-alias 7='t.setTerminalColor 7' #white
-alias 8='t.setTerminalColor 8' #black
+alias 0='t.setTerminalColor && clear'   #reset
+alias 1='t.setTerminalColor 1 && clear' #red
+alias 2='t.setTerminalColor 2 && clear' #green
+alias 3='t.setTerminalColor 3 && clear' #yellow
+alias 4='t.setTerminalColor 4 && clear' #blue
+alias 5='t.setTerminalColor 5 && clear' #pink
+alias 6='t.setTerminalColor 6 && clear' #cyan
+alias 7='t.setTerminalColor 7 && clear' #white
+alias 8='t.setTerminalColor 8 && clear' #black
 
-alias rst='t.setTerminalColor'
-alias red='t.setTerminalColor red'
-alias blue='t.setTerminalColor blue'
-alias yellow='t.setTerminalColor yellow'
-alias green='t.setTerminalColor green'
-alias cyan='t.setTerminalColor cyan'
-alias pink='t.setTerminalColor magenta'
-alias white='t.setTerminalColor 7'
+alias rst='t.setTerminalColor && clear'
+alias red='t.setTerminalColor red && clear'
+alias blue='t.setTerminalColor blue && clear'
+alias yellow='t.setTerminalColor yellow && clear'
+alias green='t.setTerminalColor green && clear'
+alias cyan='t.setTerminalColor cyan && clear'
+alias pink='t.setTerminalColor magenta && clear'
+alias white='t.setTerminalColor 7 && clear'
+alias black='t.setTerminalColor 8 && clear'
 
 # show shortcuts
 alias sc='cat ~/.aliases | egrep -v "^\s*(#|$)"'
