@@ -8,7 +8,11 @@ else
    exit 1
 fi
 
-dotfiles=(".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env")
+if [[ ! -e .tmp_env ]]; then
+    touch .tmp_env
+fi
+
+dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env")
 dir="${HOME}/.dotfiles"
 
 for dotfile in "${dotfiles[@]}";do 

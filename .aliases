@@ -72,6 +72,7 @@ alias p32='openssl rand -base64 32'
 
 # git
 alias gs='git status'
+alias gc='git checkout '
 alias gb='git branch -vv'
 alias gp='git pull '
 alias gac='git add . && git commit -a -m '

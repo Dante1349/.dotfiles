@@ -3,6 +3,7 @@ compinit
 promptinit
 
 # aliases
+source "$HOME/.tmp_env"
 source "$HOME/.dotfiles_env"
 source "$HOME/.aliases"
 source "$HOME/.functions"
