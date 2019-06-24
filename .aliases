@@ -88,3 +88,6 @@ alias sys.temp='sensors | grep Core'
 
 # network
 alias sys.ports='sudo netstat -tulanp'
+
+#virtualbox guest
+alias vbox.reset='sudo killall VBoxClient && VBoxClient-all'
