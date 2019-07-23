@@ -10,6 +10,7 @@ fi
 
 if [[ ! -e .tmp_env ]]; then
     touch .tmp_env
+    echo "#export FOO=\"bar bar ra\"" >> .tmp_env 
 fi
 
 dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env")
