@@ -77,6 +77,7 @@ alias gb='git branch -vv'
 alias gp='git pull '
 alias gac='git add . && git commit -a -m '
 alias gpsh='git push '
+alias gr='git reset --hard && git clean -f'
 
 # git confie
 alias gitconfmail='git config --global user.email '
