@@ -11,8 +11,6 @@ precmd() {
 
 setopt prompt_subst
 
-zstyle ':vcs_info:git*' formats "%{$fg[green]%}%s %{$reset_color%}%r/%S%{$fg[green]%} %{$fg[blue]%}%b%{$reset_color%}%m%u%c%{$reset_color%}"
-
 # aliases
 source "$HOME/.tmp_env"
 source "$HOME/.dotfiles_env"
