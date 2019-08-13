@@ -3,7 +3,7 @@
 #%}%F{main_color}%K{background_color}%B%~/%b%k%f"
 
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:git*' formats " %F{red}(%b%F{reset_color}%F{red}{%c%u})%F{reset_color}"
+zstyle ':vcs_info:git*' formats " %F{red}(%b%F{reset_color}%F{red}%c%u)%F{reset_color}"
 zstyle ':vcs_info:git*' actionformats " %F{yellow}%b %m%u%c%%F{reset_color}"
 
 export USER_AT_MACHINE="%F{main_color}%B%n@%m%F{reset_color}"
