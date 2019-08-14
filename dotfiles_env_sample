@@ -13,17 +13,17 @@ zstyle ':vcs_info:*' unstagedstr '+'
 #PROMPT/PS1 CONFIG
 export IMG=""
 export ASCII_ART="%F{main_color}%D{${IMG}}%F{reset_color}"
-export USER_AT_MACHINE="%F{font_color}%B%n@%m%F{reset_color}"
+export USER_AT_MACHINE="%F{font_color}%B%n@%m%b%F{reset_color}"
 export TIME_AND_DATE="%F{magenta}[%D{%d.%w.%y} %*]%F{reset_color}"
 export CURRENT_DIRECTORY="%F{main_color}%/%F{reset_color}"
-export GIT_INFO='${vcs_info_msg_0_}'
-export END_SYMBOL="%F{main_color}%B %:$ %F{reset_color}%b"
+export GIT_INFO='%B${vcs_info_msg_0_}%b'
+export END_SYMBOL="%F{main_color}%:$ %F{reset_color}"
 
 export DOTFILES_WORKSPACE_PATH="$HOME/workspace"
 export DOTFILES_MAIN_COLOR="green"
 export DOTFILES_FONT_COLOR="yellow"
 export DOTFILES_BACKGROUND_COLOR="black"
-export DOTFILES_DEFAULT_THEME="$ASCII_ART$TIME_AND_DATE $CURRENT_DIRECTORY
-$USER_AT_MACHINE$GIT_INFO$END_SYMBOL"
+export DOTFILES_DEFAULT_THEME="$ASCII_ART$TIME_AND_DATE$GIT_INFO
+$USER_AT_MACHINE:$CURRENT_DIRECTORY$END_SYMBOL"
 
 
