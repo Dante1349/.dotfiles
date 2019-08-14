@@ -26,4 +26,8 @@ for dotfile in "${dotfiles[@]}";do
   fi
 done
 
+echo "if [[ ! \$TERM =~ screen ]]; then
+    exec tmux
+fi" >> "$HOME/.bashrc"
+
 echo "Dotfiles installed successfully"

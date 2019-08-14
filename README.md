@@ -2,20 +2,13 @@
 ### setup
 * `git clone` .dotfiles in $HOME
 * `cd .dotfiles`
-* `./install_*`
-* `./setup_dotfiles`
-* `cp dotfiles_env_sample .dotsfiles_env`
-* add this to `.bashrc`
-```
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
-```
+* `./install_deb`
+* `./install_dotfiles`
 * restart terminal
 
-### adding dotfile
+### adding dotfiles
 Add the dotfiles in the variable **dotfiles** in **${HOME}/.dotfiles/setup_dotfiles** like this
-`dotfiles=(".vimrc" ".zshrc" ".gitconfig")`
+`dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env")`
 and execute the script
 
 ### add environment file for .dotfiles

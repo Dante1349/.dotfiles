@@ -11,6 +11,8 @@ for dotfile in "${dotfiles[@]}";do
   fi
 done
 
+sed '/$TERM =~ screen/,+2d' "$HOME/.bashrc" >> "$HOME/.bashrc"
+
 cd ..
 rm -rf "$HOME/.dotfiles"
 
