@@ -11,8 +11,3 @@ Add the dotfiles in the variable **dotfiles** in **${HOME}/.dotfiles/setup_dotfi
 `dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env")`
 and execute the script
 
-### add environment file for .dotfiles
-`.dotfiles_env`
-```
-export DOTFILES_WORKSPACE_PATH="$HOME/workspace"
-```

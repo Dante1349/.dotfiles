@@ -6,15 +6,15 @@ if [ -f ".dotfiles_env" ]; then
   while true; do
     read -p "Do you wish to overwrite your .dotfiles_env file?" yn
     case $yn in
-        [Yy]* ) cp dotfiles_env_sample .dotfiles_env; break;;
+        [Yy]* ) cp .dotfiles_env.template .dotfiles_env; break;;
         [Nn]* ) echo ".dotfiles_env not overwritten"; break;;
         * ) echo "Please answer yes or no.";;
     esac
   done
 else
   echo ".dotfiles_env does not exists."
-  echo "copying from dotfiles_env_sample"
-  cp dotfiles_env_sample .dotfiles_env
+  echo "copying from .dotfiles_env.template"
+  cp .dotfiles_env.template .dotfiles_env
 fi
 
 if [[ ! -e .tmp_env ]]; then
