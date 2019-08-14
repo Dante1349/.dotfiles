@@ -3,6 +3,14 @@
 if [ -f ".dotfiles_env" ]; then
   echo ".dotfiles_env exists."
   echo "Continuing..."
+  while true; do
+    read -p "Do you wish to overwrite your .dotfiles_env file?" yn
+    case $yn in
+        [Yy]* ) cp dotfiles_env_sample .dotfiles_env; break;;
+        [Nn]* ) echo ".dotfiles_env not overwritten"; break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+  done
 else
   echo ".dotfiles_env does not exists."
   echo "copying from dotfiles_env_sample"
@@ -12,6 +20,15 @@ fi
 if [[ ! -e .tmp_env ]]; then
   touch .tmp_env
   echo "#export FOO=\"bar bar ra\"" >> .tmp_env 
+else
+  while true; do
+    read -p "Do you wish to reset your .tmp_env file?" yn
+    case $yn in
+        [Yy]* ) echo "#export FOO=\"bar bar ra\"" > .tmp_env; break;;
+        [Nn]* ) echo ".tmp_env kept"; break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+  done
 fi
 
 dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env")
