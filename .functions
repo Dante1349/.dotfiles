@@ -40,3 +40,14 @@ sys.info() {
 g.getBranchParsed() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
+
+t.s() {
+  for _pane in $(tmux list-panes -F '#P'); do
+    tmux send-keys -t ${_pane} "$@" Enter
+  done
+}
+
+g.cleanBranches() {
+  git fetch -p;
+  git branch -vv | grep ': gone]'|  grep -v '\*'| awk '{ print $1; }' | xargs -r git branch -d;
+}

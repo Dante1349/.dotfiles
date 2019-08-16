@@ -1,0 +1,29 @@
+# themes
+
+# set to false for large respositories
+zstyle ':vcs_info:*' check-for-changes true
+# std git branch style
+zstyle ':vcs_info:git*' formats " %F{red}(%b%F{reset_color}%F{yellow}%u%c%F{reset_color}%F{red})%F{reset_color}"
+# std git actions branch style e.g. merge, rebase
+zstyle ':vcs_info:git*' actionformats " %F{yellow}%b %m%u%c%%F{reset_color}"
+zstyle ':vcs_info:*' stagedstr '*'
+zstyle ':vcs_info:*' unstagedstr '+'
+
+
+#PROMPT/PS1 CONFIG
+export IMG="[¬º-°]¬"
+export ASCII_ART="%F{main_color}%B%D{${IMG}}%b%F{reset_color}"
+export USER_AT_MACHINE="%F{font_color}%B%n@%m%b%F{reset_color}"
+export TIME_AND_DATE="%F{magenta}[%D{%d.%w.%y} %*]%F{reset_color}"
+export CURRENT_DIRECTORY="%F{main_color}%/%F{reset_color}"
+export GIT_INFO='%B${vcs_info_msg_0_}%b'
+export END_SYMBOL="%F{main_color}%:$ %F{reset_color}"
+
+export DOTFILES_WORKSPACE_PATH="$HOME/workspace"
+export DOTFILES_MAIN_COLOR="green"
+export DOTFILES_FONT_COLOR="yellow"
+export DOTFILES_BACKGROUND_COLOR="black"
+export DOTFILES_DEFAULT_THEME="$ASCII_ART $TIME_AND_DATE$GIT_INFO
+$USER_AT_MACHINE:$CURRENT_DIRECTORY$END_SYMBOL"
+
+

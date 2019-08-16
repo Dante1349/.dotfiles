@@ -29,7 +29,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias e='exit'
-alias c='clear'
+alias c='printf "\033c"'
 alias b='cd -'
 
 # Folder Shortcuts
@@ -73,10 +73,12 @@ alias p32='openssl rand -base64 32'
 
 # git
 alias gs='git status'
+alias gc='git checkout '
 alias gb='git branch -vv'
 alias gp='git pull '
 alias gac='git add . && git commit -a -m '
 alias gpsh='git push '
+alias gr='git reset --hard && git clean -f'
 
 # git confie
 alias gitconfmail='git config --global user.email '
@@ -88,3 +90,6 @@ alias sys.temp='sensors | grep Core'
 
 # network
 alias sys.ports='sudo netstat -tulanp'
+
+#virtualbox guest
+alias vbox.reset='sudo killall VBoxClient && VBoxClient-all'
