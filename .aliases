@@ -60,10 +60,11 @@ alias untar='tar -zxvf '
 # webserver from current folder
 alias webserver='python -m SimpleHTTPServer 8000'
 
-# showip
+# network
 alias ip.ext='curl ipinfo.io/ip'
 alias ip.lan='ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}''
 alias ip.wlan='ifconfig wlp3s0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}''
+alias ip.scan='nmap -sP '
 
 # password generation
 alias p8='openssl rand -base64 8'
