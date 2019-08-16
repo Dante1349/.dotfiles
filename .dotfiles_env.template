@@ -12,7 +12,7 @@ zstyle ':vcs_info:*' unstagedstr '+'
 
 #PROMPT/PS1 CONFIG
 export IMG="[¬º-°]¬"
-export ASCII_ART="%F{main_color}%B%D{${IMG}}%b%F{reset_color}"
+export ASCII_ART="%F{main_color}%D{${IMG}}%F{reset_color}"
 export USER_AT_MACHINE="%F{font_color}%B%n@%m%b%F{reset_color}"
 export TIME_AND_DATE="%F{magenta}[%D{%d.%w.%y} %*]%F{reset_color}"
 export CURRENT_DIRECTORY="%F{main_color}%/%F{reset_color}"
