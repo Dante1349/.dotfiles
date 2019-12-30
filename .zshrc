@@ -24,6 +24,13 @@ antigen bundle z
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle command-not-found
+
+antigen bundle npm
+antigen bundle docker
+antigen bundle rsync
+antigen bundle nmap
+
 antigen apply
 
 # aliases
