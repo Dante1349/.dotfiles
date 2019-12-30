@@ -11,6 +11,19 @@ precmd() {
 
 setopt prompt_subst
 
+# history
+HISTFILE="$HOME/.zsh_history"
+SAVEHIST=1000
+setopt share_history
+
+# antigen plugins manager
+source "$HOME/.antigen.zsh"
+
+antigen bundle z
+## antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen apply
+
 # aliases
 source "$HOME/.tmp_env"
 source "$HOME/.dotfiles_env"
