@@ -21,6 +21,8 @@ source "$HOME/.antigen.zsh"
 
 antigen bundle z
 ## antigen bundle zsh-users/zsh-completions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 
