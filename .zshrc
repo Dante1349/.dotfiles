@@ -33,6 +33,9 @@ antigen bundle nmap
 
 antigen apply
 
+## correct permissions
+chmod -R 755 "$HOME/.antigen"
+
 # aliases
 source "$HOME/.tmp_env"
 source "$HOME/.dotfiles_env"
