@@ -13,7 +13,8 @@ for dotfile in "${dotfiles[@]}";do
   fi
 done
 
-sed '/$TERM =~ screen/,+2d' "$HOME/.bashrc" >> "$HOME/.bashrc"
+# sed removes the line containing the string plus the next two lines
+sed -i '/$TERM =~ screen/,+2d' "$HOME/.bashrc"
 
 cd ..
 rm -rf "$HOME/.dotfiles"
