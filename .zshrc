@@ -65,3 +65,9 @@ fi
 
 # tab -> folder selection 
 zstyle ':completion:*' menu select
+
+###-tns-completion-start-###
+if [ -f /home/marc/.tnsrc ]; then 
+    source /home/marc/.tnsrc 
+fi
+###-tns-completion-end-###
