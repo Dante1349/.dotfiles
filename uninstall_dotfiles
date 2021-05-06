@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env" ".antigen.zsh")
+dotfiles=(".tmp_env" ".zshrc" ".aliases" ".functions" ".dotfiles_env" ".antigen.zsh")
 dir="${HOME}/.dotfiles"
 
 echo "dont execute this from the .dotfiles directory"

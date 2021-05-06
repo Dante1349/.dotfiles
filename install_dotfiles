@@ -30,7 +30,7 @@ else
   done
 fi
 
-dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env" ".antigen.zsh")
+dotfiles=(".tmp_env" ".zshrc" ".aliases" ".functions" ".dotfiles_env" ".antigen.zsh")
 dir="${HOME}/.dotfiles"
 
 for dotfile in "${dotfiles[@]}";do
@@ -43,7 +43,7 @@ for dotfile in "${dotfiles[@]}";do
 done
 
 echo "if [[ ! \$TERM =~ screen ]]; then
-    exec tmux
+    exec byobu
 fi" >> "$HOME/.bashrc"
 
 echo "Dotfiles installed successfully"
