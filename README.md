@@ -12,17 +12,5 @@ Add the dotfiles in the variable **dotfiles** in **${HOME}/.dotfiles/setup_dotfi
 and execute the script
 
 ### shortcuts
-<kbd>Strg</kbd> + <kbd>D</kbd> is the <kbd>Meta</kbd> Key Shortcut.
-
-<kbd>Shift</kbd> + <kbd>Left Mouse Button</kbd> marking for copying.
-
-<kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Left</kbd>/<kbd>Right</kbd>/<kbd>Down</kbd> for jumping tiled shells.
-
-<kbd>Meta</kbd> + <kbd>:</kbd> tiles the shell vertically.</br>
-<kbd>Meta</kbd> + <kbd>-</kbd> tiles the shell horizontally.
-
-<kbd>Meta</kbd> + <kbd>Up</kbd>/<kbd>Up</kbd> rotates the current shell in the grid.
-
-<kbd>Meta</kbd> + <kbd>X</kbd> kills the shell.
-
-<kbd>Meta</kbd> + <kbd>Z</kbd> is fullscreen toggle for the current shell.
+`sc` prints the available aliases
+`sck` prints the available keyboard shortcuts

@@ -21,6 +21,7 @@ alias black='t.setTerminalColor 8 && clear'
 
 # show shortcuts
 alias sc='cat ~/.aliases | egrep -v "^\s*(#|$)"'
+alias sck='cat /usr/share/doc/byobu/help.tmux.txt'
 alias ea='nano ~/.dotfiles/.aliases'
 alias ef='nano ~/.dotfiles/.functions'
 # Easier navigation: .., ..., ...., .....
