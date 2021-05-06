@@ -46,7 +46,4 @@ echo "if [[ ! \$TERM =~ screen ]]; then
     exec tmux
 fi" >> "$HOME/.bashrc"
 
-echo "set -g default-shell /bin/zsh
-set -g default-command /bin/zsh" >> "$HOME/.byobu/.tmux.conf"
-
 echo "Dotfiles installed successfully"

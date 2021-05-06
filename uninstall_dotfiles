@@ -16,8 +16,6 @@ done
 # sed removes the line containing the string plus the next two lines
 sed -i '/$TERM =~ screen/,+2d' "$HOME/.bashrc"
 
-sed -i '/set -g default-shell/,+1d' "$HOME/.byobu/.tmux.conf"
-
 cd ..
 rm -rf "$HOME/.dotfiles"
 
