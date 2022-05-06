@@ -1,0 +1,49 @@
+#!/bin/bash
+
+if [ -f "$HOME/.dotfiles_env" ]; then
+  echo ".dotfiles_env exists."
+  while true; do
+    read -p "Do you wish to overwrite your .dotfiles_env file?" yn
+    case $yn in
+        [Yy]* ) cp "$HOME/.dotfiles/.dotfiles_env.template" "$HOME/.dotfiles/.dotfiles_env"; break;;
+        [Nn]* ) echo ".dotfiles_env not overwritten"; break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+  done
+else
+  echo ".dotfiles_env does not exists."
+  echo "copying from .dotfiles_env.template"
+  cp "$HOME/.dotfiles/.dotfiles_env.template" "$HOME/.dotfiles/.dotfiles_env"
+fi
+
+if [[ ! -e .tmp_env ]]; then
+  touch "$HOME/.dotfiles/.tmp_env"
+  echo "#export FOO=\"bar bar ra\"" >> "$HOME/.dotfiles/.tmp_env"
+else
+  while true; do
+    read -p "Do you wish to reset your .tmp_env file?" yn
+    case $yn in
+        [Yy]* ) echo "#export FOO=\"bar bar ra\"" > "$HOME/.dotfiles/.tmp_env"; break;;
+        [Nn]* ) echo ".tmp_env kept"; break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+  done
+fi
+
+dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env" ".antigen.zsh")
+dir="${HOME}/.dotfiles"
+
+for dotfile in "${dotfiles[@]}";do
+  if [ -f "${HOME}/${dotfile}" ]; then
+    rm "${HOME}/${dotfile}"
+    ln -s "${dir}/${dotfile}" "${HOME}"
+  else
+    ln -s "${dir}/${dotfile}" "${HOME}"
+  fi
+done
+
+echo "if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi" >> "$HOME/.bashrc"
+
+echo "Dotfiles installed successfully"
