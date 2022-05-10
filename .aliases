@@ -55,6 +55,11 @@ alias uu='sudo apt-get update && sudo apt-get upgrade -y'
 alias ui='sudo apt-get install '
 alias us='sudo apt-cache search '
 
+# open suse
+alias osu='sudo zypper update -y && sudo zypper patch -y '
+alias osi='sudo zypper install '
+alias oss='zypper search '
+
 # untar
 alias untar='tar -zxvf '
 
