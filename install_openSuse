@@ -1,4 +1,3 @@
 #/bin/bash
-sudo apt-get update && sudo apt-get install \
-nano tmux zsh lm-sensors python net-tools \
--y 
+sudo zypper update && sudo zypper install -y \
+nano tmux zsh python net-tools \
