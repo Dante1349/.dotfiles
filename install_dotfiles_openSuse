@@ -42,6 +42,10 @@ for dotfile in "${dotfiles[@]}";do
   fi
 done
 
+# copy git message hook
+mkdir -p "$HOME/.git-templates/hooks"
+cp "${dir}/prepare-commit-msg" "${HOME}/.git-templates/hooks/"
+
 echo "if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi" >> "$HOME/.bashrc"

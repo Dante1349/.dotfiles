@@ -1,0 +1,27 @@
+#!/bin/sh
+# GIT HOOK
+# prepare-commit-msg
+# This hook is invoked by git-commit[1] right after preparing the default log message, and before the editor is started.
+# add issue id as prefix to commit message 
+
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+MESSAGE=$(cat $COMMIT_MSG_FILE)
+
+# get current branch
+branchName=`git rev-parse --abbrev-ref HEAD`
+
+# search issue id in the branch name, such a "123-description" or "XXX-123-description"
+issueId=[$(echo $branchName | grep -Eo '^(\w+/)?(\w+[-_])?[0-9]+' | grep -Eo '(\w+[-])?[0-9]+' | tr "[:lower:]" "[:upper:]")]
+
+echo $branchName
+echo $issueId
+
+if [[ $issueId == "[]" || "$MESSAGE" == "$issueId"* ]];then
+  exit 0;
+fi
+
+# write to message file 
+echo "$issueId $MESSAGE" > $COMMIT_MSG_FILE
