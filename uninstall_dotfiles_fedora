@@ -1,0 +1,25 @@
+#!/bin/bash
+
+dotfiles=(".tmp_env" ".tmux.conf" ".zshrc" ".aliases" ".functions" ".dotfiles_env" ".antigen.zsh")
+dir="${HOME}/.dotfiles"
+
+echo "dont execute this from the .dotfiles directory"
+
+for dotfile in "${dotfiles[@]}";do 
+  if [ -f "${HOME}/${dotfile}" ]; then
+    rm "${HOME}/${dotfile}"
+  else
+    echo "${HOME}/${dotfile} not found" 
+  fi
+done
+
+# remove git message hook
+rm "${HOME}/.git-templates/hooks/prepare-commit-msg"
+
+# sed removes the line containing the string plus the next two lines
+sed -i '/screen =~ screen/,+2d' "$HOME/.bashrc"
+
+cd ..
+rm -rf "$HOME/.dotfiles"
+
+echo "Dotfiles uninstalled successfully"
